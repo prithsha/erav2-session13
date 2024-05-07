@@ -48,4 +48,4 @@ assignment_13_lightning.ipynb controls the execution
 
 - After 30 epochs test accuracy was: 75.05 %
 - For misclassified images and grdcam cam we have used saved model
-
+- 
