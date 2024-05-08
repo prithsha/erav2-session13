@@ -57,6 +57,7 @@ class LightResnet(LightningModule):
 
     def configure_optimizers(self):
         optimizer = torch.optim.Adam(self.parameters(), lr=self.hparams.lr, weight_decay=1e-4)
+        print(f"lr: {self.hparams.lr}")
         steps_per_epoch = self._batch_size # BATCH_SIZE
         scheduler_dict = {
             "scheduler": OneCycleLR(
