@@ -22,7 +22,7 @@ Application uses albumentations library for image augmentation
 assignment_13_lightning.ipynb controls the execution 
 
 1. cifar10 input is 32x32 image while resent 18 expects 224x224. So we have updated the starting layer of resnet18 . We are also using Resnet18 from torchvision.models.resnet18. 
-2. We have created module LightResnet derived from LightningModule
+2. We have created module LightResnet derived from LightningModule in models\modelHandler.py
     - Created three multiclass torch metrics for train, test and validation accuracy
     - Following functions Overrided. On each function we calculate accuracy
         - training_step
@@ -46,6 +46,6 @@ assignment_13_lightning.ipynb controls the execution
 
 ## Results 
 
-- After 30 epochs test accuracy was: 75.05 %
+- After 30 epochs test accuracy was: 75.11 %
 - For misclassified images and grdcam cam we have used saved model
-- 
+
