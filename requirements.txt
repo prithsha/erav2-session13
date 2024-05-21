@@ -14,4 +14,4 @@ lightning
 lightning-bolts
 rich
 tensorboard
-
+gradio
