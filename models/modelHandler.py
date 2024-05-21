@@ -56,7 +56,7 @@ class LightResnet(LightningModule):
         self.log('test_acc', self.test_acc, on_step=False, on_epoch=True, prog_bar=True, logger=True)
 
     def configure_optimizers(self):
-        optimizer = torch.optim.Adam(self.parameters(), lr=self.hparams.lr, weight_decay=1e-4)
+        optimizer = torch.optim.SGD(self.parameters(), lr=self.hparams.lr, weight_decay=1e-4, momentum=0.9)
         print(f"lr: {self.hparams.lr}")
         steps_per_epoch = self._batch_size # BATCH_SIZE
         scheduler_dict = {
